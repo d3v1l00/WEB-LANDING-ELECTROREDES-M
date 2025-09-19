@@ -430,7 +430,7 @@ export const logSecurityEvent = (event, data = {}) => {
   
   // En desarrollo, log a consola
   if (process.env.NODE_ENV === 'development') {
-    console.warn('🔒 Security Event:', logEntry);
+    console.warn('Security Event:', logEntry);
   }
   
   // En producción, enviar a backend de logging
