@@ -31,6 +31,7 @@ export const sanitizeText = (input) => {
     .replace(/data:/gi, '') // data: protocol
     
     // Remover caracteres de escape y control
+    // eslint-disable-next-line no-control-regex
     .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '')
     
     // Limitar longitud
@@ -115,7 +116,7 @@ export const preventSSTI = (input) => {
     /\$\{.*\}/g,   // Template literals
     /<%.*%>/g,     // ASP, ERB
     /\{\{.*\}\}/g, // Angular expressions
-    /\#\{.*\}/g    // Ruby interpolation
+    /#{.*}/g    // Ruby interpolation
   ];
   
   let sanitized = input;
@@ -438,7 +439,7 @@ export const logSecurityEvent = (event, data = {}) => {
   return logEntry;
 };
 
-export default {
+const SecurityUtils = {
   sanitizeText,
   sanitizeName,
   sanitizeEmail,
@@ -456,3 +457,5 @@ export default {
   getUserIdentifier,
   logSecurityEvent
 };
+
+export default SecurityUtils;
