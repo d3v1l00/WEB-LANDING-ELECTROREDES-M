@@ -1,0 +1,90 @@
+.floating-social {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column; /* Columna normal: iconos arriba, botón abajo */
+  align-items: center; /* Centrar todo horizontalmente */
+}
+
+.floating-btn {
+  background: var(--primary-red); /* Ahora rojo por defecto */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 56px; /* Botón un poco más grande */
+  height: 56px;
+  font-size: 1.8rem; /* Icono más grande */
+  box-shadow: 0 4px 16px rgba(44,62,80,0.18);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.floating-btn:hover {
+  background: var(--primary-blue); /* Al hover se vuelve azul */
+  transform: scale(1.08);
+}
+
+.floating-icons {
+  display: flex;
+  flex-direction: column; /* Iconos en columna */
+  align-items: center; /* Centrar iconos horizontalmente */
+  gap: 12px;
+  margin-bottom: 10px; /* Espacio DEBAJO de los iconos (arriba del botón) */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px); /* Aparecen desde abajo hacia arriba */
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.floating-social.open .floating-icons {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.floating-icon {
+  border-radius: 50%;
+  width: 46px; /* Un poco más grande */
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem; /* Icono más grande */
+  box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+  transition: all 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+
+.floating-icon.facebook {
+  background: #1877f3; /* Azul de Facebook */
+  color: #fff;
+}
+
+.floating-icon.facebook:hover {
+  background: #145dbf; /* Azul más oscuro al hover */
+  transform: scale(1.12);
+  box-shadow: 0 4px 16px rgba(24, 119, 243, 0.3);
+}
+
+.floating-icon.instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); /* Gradiente real de Instagram */
+  color: #fff;
+}
+
+.floating-icon.instagram:hover {
+  background: linear-gradient(45deg, #e1306c, #c13584, #833ab4, #405de6); /* Gradiente más intenso */
+  transform: scale(1.12);
+  box-shadow: 0 4px 16px rgba(225, 48, 108, 0.3);
+}
+
+@media (max-width: 600px) {
+  .floating-social {
+    bottom: 18px;
+    right: 18px;
+  }
+} 

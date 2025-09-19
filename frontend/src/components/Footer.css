@@ -1,0 +1,231 @@
+.footer {
+  background: var(--dark-gray);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.footer-logo-icon {
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+  filter: drop-shadow(0 0 10px var(--primary-blue));
+}
+
+.footer-logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  align-items: flex-start;
+}
+
+.footer-logo-primary {
+  color: var(--primary-blue);
+  text-shadow: 0 0 10px var(--primary-blue);
+}
+
+.footer-logo-secondary {
+  color: var(--primary-red);
+  text-shadow: 0 0 10px var(--primary-red);
+}
+
+.footer-logo-location {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.footer-logo-image {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.footer-logo-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 15px var(--primary-blue));
+}
+
+.footer-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent-cyan);
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-secondary);
+}
+
+.contact-icon {
+  color: var(--primary-blue);
+  font-size: 1.1rem;
+  min-width: 16px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1.1rem;
+}
+
+/* Facebook con color real */
+.social-link:nth-child(1) {
+  background: #1877f3;
+  color: white;
+}
+
+.social-link:nth-child(1):hover {
+  background: #145dbf;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(24, 119, 243, 0.3);
+}
+
+/* Instagram con gradiente real */
+.social-link:nth-child(2) {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  color: white;
+}
+
+.social-link:nth-child(2):hover {
+  background: linear-gradient(45deg, #e1306c, #c13584, #833ab4, #405de6);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(225, 48, 108, 0.3);
+}
+
+/* WhatsApp con color real */
+.social-link:nth-child(3) {
+  background: #25d366;
+  color: white;
+}
+
+.social-link:nth-child(3):hover {
+  background: #128c7e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+}
+
+.footer-cta {
+  margin-top: 20px;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--glass-border);
+  padding-top: 20px;
+}
+
+.footer-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary-blue), transparent);
+  margin-bottom: 20px;
+}
+
+.footer-bottom-content {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.footer-bottom-content p {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 900px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  .footer-section {
+    align-items: center;
+    text-align: center;
+  }
+  .footer-logo {
+    justify-content: center;
+  }
+} 

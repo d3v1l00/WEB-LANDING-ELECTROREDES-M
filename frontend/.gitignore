@@ -1,0 +1,15 @@
+# Frontend specific gitignore
+# Esta carpeta ya está cubierta por el .gitignore de la raíz
+# Este archivo es opcional pero mantiene la estructura limpia
+
+# Build directory
+build/
+
+# Dependencies
+node_modules/
+
+# Cache
+.eslintcache
+
+# Environment
+.env.local
